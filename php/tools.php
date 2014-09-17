@@ -10,6 +10,9 @@
       $outmsg['state'] = 1;
       $outmsg['ver'] = '1.0';
       $outmsg['method'] = array('ping', 'traceroute', 'port');
+      exec("ping",$out, $return); 
+      $outmsg['exec'] = $return;
+
       //$outmsg['urlImg'] = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'';
       return $outmsg;
     }
