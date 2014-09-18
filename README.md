@@ -8,6 +8,7 @@ IP-helper
 - 打开浏览器访问 tools.php 当然你也可以改名
 - 若出现以下界面，表示安装成功。
 - 在IP Helper App中添加server
+  <p align="center" ><img src="http://www.sailcore.com/iphelper/help.jpg" alt="help" title="IP-helper"></p>
 - 通过server ping下target host
 
 
