@@ -1,21 +1,21 @@
 IP-helper
 ===================================
-  这是为了ip-helper制作的简单工具，透过server host 的ping命令，测试target host 的状况。现在只提供了php的版本。
+  This is a simple tool for [ip-helper](https://itunes.apple.com/us/app/ip-helper-ping-tracert-whois/id622012742?l=zh&ls=1&mt=8)，use server host pingcommand ，to test target host situation.  Now provides the php version.
 
   
 ### Usage
 - Download files and upload to your server
-- 打开浏览器访问 tools.php 当然你也可以改名
-- 若出现以下界面，表示安装成功。
-- 在IP Helper App中添加server
+- Open a browser to access tools.php. course, you can rename file.
+- If the you can see this, the installation was successful.。
+- Add server in app
   <p align="center" ><img src="http://www.sailcore.com/iphelper/help.jpg" alt="help" title="IP-helper"></p>
-- 通过server ping下target host
+- ing the target host
 
 
 ### Requirements
-Php>5.2x and可以用exec()
-检查 php.ini ，让 disable_functions 中没有exec function
-如果Win下遇到unable to fork... 则将cmd.exe 添加IUSR_ComputerName的用户权限
+Php>5.2x and exec() is available
+check php.ini ，make sure  “exec” function not in disable_functions.
+If look the “unable to fork...” in Windows, add the IUSR_ComputerName ‘s User rights to cmd.exe.
 
 ### Testing environment
 - Windows XP
