@@ -8,14 +8,10 @@
 
     public function methodList(){
       $outmsg['state'] = 1;
-      $outmsg['ver'] = '1.1';
+      $outmsg['ver'] = '1.0';
       $outmsg['method'] = array('ping', 'traceroute', 'port');
       exec("ping",$out, $return); 
       $outmsg['exec'] = $return;
-
-      if (file_exists('glype/r.php')) {
-        $outmsg['method'] = array('ping', 'traceroute', 'port', 'glype');
-      }
 
       //$outmsg['urlImg'] = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'';
       return $outmsg;
@@ -70,13 +66,6 @@
 
 
   $Tools = new Tools();
-
-  if (file_exists('glype/r.php')) {
-        if (isset($_REQUEST['url'])){
-          header("location:/glype/r.php?url=".$_REQUEST['url']);
-          die();
-        }
-      }
 
   if (!isset($_REQUEST['method'])){
     echo json_encode($Tools->methodList());
